@@ -4,12 +4,14 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class UserController extends Controller
+class NoteController extends Controller
 {
     /**
-     * @Route("/registration")
+     * @Route("/notes")
+     *
+     * @return Response
      */
-    public function registration()
+    public function notes()
     {
         return new Response(
             '<html><body>Lucky number: 11</body></html>'
@@ -17,9 +19,9 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/profile")
+     * @Route("/notes/{id}", name="note")
      */
-    public function profile()
+    public function note()
     {
         return new Response(
             '<html><body>Lucky number: 11</body></html>'
