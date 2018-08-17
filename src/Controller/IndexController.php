@@ -10,7 +10,7 @@ class IndexController extends Controller
     /**
      * @Route("/")
      *
-     * @return JsonResponse
+     * @return Response
      */
     public function index()
     {
