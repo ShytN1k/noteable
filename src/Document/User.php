@@ -42,4 +42,14 @@ class User implements \Serializable
      * @MongoDB\Field(type="string")
      */
     protected $notes;
+
+    public function serialize()
+    {
+        // TODO: Implement serialize() method.
+    }
+
+    public function unserialize($serialized)
+    {
+        // TODO: Implement unserialize() method.
+    }
 }
