@@ -11,7 +11,7 @@ class NoteController extends Controller
      *
      * @return Response
      */
-    public function notes()
+    public function displayNotes()
     {
         return new Response(
             '<html><body>Lucky number: 11</body></html>'
@@ -21,7 +21,7 @@ class NoteController extends Controller
     /**
      * @Route("/notes/{id}", name="note")
      */
-    public function note()
+    public function displayNote()
     {
         return new Response(
             '<html><body>Lucky number: 11</body></html>'

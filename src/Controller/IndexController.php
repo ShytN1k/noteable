@@ -14,8 +14,6 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return new Response(
-            '<html><body>Lucky number: 11</body></html>'
-        );
+        return $this->render('index.html.twig');
     }
 }
