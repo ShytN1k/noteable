@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="icon" href="{{ asset('build/images/favicon.ico') }}" type="image/x-icon" />
+        <link rel="icon" href="{{ asset('build/images/favicon-w.ico') }}" type="image/x-icon" />
         <title>{% block title %}NotEable{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('build/app.css') }}">
@@ -14,10 +14,11 @@
 
             <header class="header">
                 {% block header %}
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-main">
                         <a class="navbar-brand" href="{{ path('app_index_index') }}">
-                            <img src="{{ asset('build/images/logo.png') }}" width="108" height="30" alt="NotEable">
+                            <img src="{{ asset('build/images/logo-w.png') }}" width="108" height="30" alt="NotEable">
                         </a>
+                        <a href="#" class="btn btn-outline-dark">Login</a>
                     </nav>
                 {% endblock %}
             </header>
@@ -34,7 +35,11 @@
             </div>
 
             <div id="footer">
-                {% block footer %}{% endblock %}
+                {% block footer %}
+                    <footer class="bg-main fixed-bottom">
+                        2018.
+                    </footer>
+                {% endblock %}
             </div>
         </div>
 
