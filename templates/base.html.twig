@@ -14,11 +14,21 @@
 
             <header class="header">
                 {% block header %}
-                    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-main">
+                    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-main">
                         <a class="navbar-brand" href="{{ path('app_index_index') }}">
                             <img src="{{ asset('build/images/logo-w.png') }}" width="108" height="30" alt="NotEable">
                         </a>
-                        <a href="#" class="btn btn-outline-dark">Login</a>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a href="#" class="btn btn-outline-brown">Registration</a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="navbar-span">or</span>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ path('login') }}" class="btn btn-brown">Login</a>
+                            </li>
+                        </ul>
                     </nav>
                 {% endblock %}
             </header>
@@ -34,13 +44,11 @@
                 {% block body %}{% endblock %}
             </div>
 
-            <div id="footer">
+            <footer class="bg-main fixed-bottom">
                 {% block footer %}
-                    <footer class="bg-main fixed-bottom">
-                        2018.
-                    </footer>
+                    2018.
                 {% endblock %}
-            </div>
+            </footer>
         </div>
 
         {% block javascripts %}

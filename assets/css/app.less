@@ -1,14 +1,78 @@
-html {
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
+:root {
+    --brown-main: #5b1b0a;
+    --yellow-main: #fce119;
 }
 
 .bg-main {
-    background: linear-gradient(75deg, #5b1b0a, #fce119);
+    background: linear-gradient(75deg, var(--brown-main), var(--yellow-main));
+}
+
+.btn-outline-brown {
+    color: var(--brown-main);
+    background-color: transparent;
+    background-image: none;
+    border-color: var(--brown-main);
+}
+
+.btn-outline-brown:hover,
+.btn-outline-brown.hover {
+    color: var(--white);
+    background-color: #5b2e0a;
+    border-color: #5b2e0a;
+}
+
+.btn-outline-brown.focus,
+.btn-outline-brown:focus {
+    box-shadow:0 0 0 .2rem rgba(132,59,31,.5);
+}
+
+.btn-outline-brown.disabled,
+.btn-outline-brown:disabled {
+    color: var(--brown-main);
+    background-color: transparent;
+}
+
+.btn-brown {
+    color: var(--white);
+    background-color: var(--brown-main);
+    border-color: var(--brown-main);
+}
+
+.btn-brown:hover,
+.btn-brown.hover {
+    color: var(--white);
+    background-color: #5b2e0a;
+    border-color: #5b2e0a;
+}
+
+.btn-brown.focus,
+.btn-brown:focus {
+    box-shadow:0 0 0 .2rem rgba(132,59,31,.5);
+}
+
+.btn-brown.disabled,
+.btn-brown:disabled {
+    color: var(--white);
+    background-color: #54361f;
+    border-color: #54361f
+}
+
+.navbar-span {
+    color: var(--brown-main);
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+.login-form {
+    color: var(--brown-main);
+    padding: 12px 20px;
+    border-color: var(--brown-main);
+    border-radius: 5px;
+}
+
+.login-form.login-title {
+    font-size: 20px;
+    text-align: center;
 }
 
 footer {

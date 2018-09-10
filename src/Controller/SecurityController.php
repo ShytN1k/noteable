@@ -3,19 +3,21 @@ namespace App\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends Controller
 {
     /**
-     * @Route("/login")
+     * @Route("/login", name="login")
      *
      * @return Response
      */
-    public function index()
+    public function login(AuthenticationUtils $authenticationUtils)
     {
-        return new Response(
-            '<html><body>Lucky number: 11</body></html>'
-        );
+        return $this->render('security/login.html.twig', [
+            'last_username' => $authenticationUtils->getLastUsername(),
+            'error' => $authenticationUtils->getLastAuthenticationError()
+        ]);
     }
 
     /**
