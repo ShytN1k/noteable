@@ -1,12 +1,19 @@
 security:
-    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
     providers:
-        in_memory: { memory: ~ }
+        db_provider:
+            mongodb: {class: App\Document\User, property: username}
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
+            pattern:    ^/
+            provider: db_provider
+            user_checker: App\Security\UserChecker
             anonymous: ~
             form_login:
                 login_path: login
