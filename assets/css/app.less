@@ -3,6 +3,10 @@
     --yellow-main: #fce119;
 }
 
+html, body {
+    height:100%;
+}
+
 .bg-main {
     background: linear-gradient(75deg, var(--brown-main), var(--yellow-main));
 }
@@ -17,8 +21,8 @@
 .btn-outline-brown:hover,
 .btn-outline-brown.hover {
     color: var(--white);
-    background-color: #5b2e0a;
-    border-color: #5b2e0a;
+    background-color: var(--brown-main);
+    border-color: var(--brown-main);
 }
 
 .btn-outline-brown.focus,
@@ -65,15 +69,28 @@
 
 .login-form {
     color: var(--brown-main);
-    padding: 12px 20px;
-    border-color: var(--brown-main);
+    padding: 4px 20px;
+    border: solid 1px var(--brown-main);
     border-radius: 5px;
-}
-
-.login-form.login-title {
-    font-size: 20px;
     text-align: center;
 }
+
+.login-form .login-title {
+    font-size: 30px;
+}
+
+.login-form .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.login-form input {
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    border: solid 1px #ccc;
+    border-radius: 0.25rem;
+ }
 
 footer {
     color: var(--white);

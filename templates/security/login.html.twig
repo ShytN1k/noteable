@@ -6,11 +6,11 @@
 {% endblock %}
 
 {% block body %}
-    <div class="row">
+    <div class="row mx-auto my-5">
         <div class="col-md-4 offset-md-4 col-lg-4 offset-lg-4">
             <div class="login-form">
                 <span class="login-title">
-                    Login into NotEable
+                    Login
                 </span>
                 {% if error %}
                     <div class="login-error">
@@ -32,11 +32,9 @@
                         <input type="password" id="password" name="_password" placeholder="password"/>
                     </div>
 
-                    <div class="login-actions form-group row">
-                        <button type="submit" class="btn btn-brown">Login</button>
-                        <a href="#" class="btn btn-outline-brown">Registration</a>
-                        <a href="#" class="btn btn-outline-brown">Recover password</a>
-                    </div>
+                    <button type="submit" class="btn btn-brown">Login</button>
+                    <a href="#" class="btn btn-outline-brown">Recover password</a>
+                    <a href="#" class="btn btn-outline-brown">Registration</a>
                 </form>
             </div>
         </div>
